@@ -12,7 +12,6 @@ def sum_digits(num):
     while num > 0:
         our_sum += num % 10
         num //= 10
-         
 
     return our_sum
 

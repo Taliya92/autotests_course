@@ -10,23 +10,15 @@
 def multiplication_chain(num):
     # Здесь нужно написать код
     count_multy = 0
-    if num > 9:
-        count_multy = 9 if not num % 9 else num % 9
-    else: count_multy = 0
+    while num > 9:
+        count = 1
+        while num > 0:
+            count *= num % 10
+            num //= 10
+        num = count
+        count_multy += 1
+
     return count_multy
-    # count1 = 1
-    # while num > 0:
-    #     ost = num % 10
-    #     count1 *= ost
-    #
-    # if len(count1) > 0:
-    #     count_multy += 1
-    #     num //= 10
-        # if len(count_multy)>0:
-         ##    count_multy
-   # while count_multy > 9:
-
-
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 

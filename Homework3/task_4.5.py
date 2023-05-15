@@ -16,10 +16,9 @@
 def josephus_task(num_people, kill_num):
     # Здесь нужно написать код
     survivor = 0
-    if num_people == 1:
-        return 1
-    elif num_people > 1:
-        survivor = 1 + (josephus_task(num_people - 1, kill_num) + kill_num - 1) % num_people
+    for i in range(1, num_people + 1):
+        survivor = (survivor + kill_num) % i
+    survivor += 1
 
     return survivor
 

@@ -5,15 +5,11 @@
 
 def create_phone_number(num_tuple):
     # Здесь нужно написать код
-    # str_phone = ''.join(num_tuple)
-    str_phone = str(num_tuple)
-    str_phone[:2] + str_phone[3:5] + str_phone[6:]
+    phone1 = ''.join(map(str,num_tuple[0:3]))
+    phone2 = ''.join(map(str, num_tuple[3:6]))
+    phone3 = ''.join(map(str, num_tuple[6:10]))
+    str_phone = f'({phone1}) {phone2}-{phone3}'
 
-
-    for i in num_tuple:
-        str1 = str1 + i
-    #    str_phone = num_tuple[:2] + ' ' + i[3:5] + '-' + i[6:]
-    str_phone = str1[:2] + str1[3:5] + str1[6:]
     return str_phone
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ

@@ -8,19 +8,13 @@
 def flatten_and_sort(array):
     # Здесь нужно написать код
     result_list = []
-    result_list = ''.join(array)
-    for lst in result_list:
-        for elem in lst:
+    for i in array:
+        for elem in i:
             result_list.append(elem)
-
-    # result_list1 = [i for sublist in result_list for i in sublist]
-
- #       array.tolist()
-   # sorted(result_list, key = lambda  x: x[0])
-    #print(result_list.sort)
+    result_list.sort()
 
     return result_list
-    print(type(result_list))
+
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
 
 
