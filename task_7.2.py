@@ -24,27 +24,27 @@
 # Здесь пишем код
 
 class PersonInfo:
-    def __init__(self, ФИО: str, возрaст: int, *Подразделения: str):
-        self.ФИО = ФИО
-        self.возрaст = возрaст
-        self.Подразделения = Подразделения
+    def __init__(self, fio: str, age: int, *subdivision: str):
+        self.fio = fio
+        self.age = age
+        self.subdivision = subdivision
 
     def short_name(self):
-        return f'{self.ФИО}'
+        name, surname = self.fio.split()
+        return f'{surname} {name[0]}.'
 
     def path_deps(self):
-        return '->'.join(self.Подразделения)
+        return ' --> '.join(self.subdivision)
 
     def new_salary(self):
-        my_string = ''.join(self.Подразделения)
+        my_string = ''.join(self.subdivision)
         c = dict()
 
         for letter in my_string:
             c[letter] = (c.get(letter, 0) + 1)
 
         sorted_c = dict(sorted(c.items(), key=lambda item: item[1]))
-        #  print(sorted_c)
-        return 1337 * self.возрaст * (sorted_c[list(sorted_c.keys())[-1]] + sorted_c[list(sorted_c.keys())[-2]] + sorted_c[list(sorted_c.keys())[-3]])
+        return 1337 * self.age * (sorted_c[list(sorted_c.keys())[-1]] + sorted_c[list(sorted_c.keys())[-2]] + sorted_c[list(sorted_c.keys())[-3]])
 
 
 # Ниже НИЧЕГО НЕ НАДО ИЗМЕНЯТЬ
