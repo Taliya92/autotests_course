@@ -26,7 +26,7 @@ class Trigon:
             if item <= 0:
                 raise ValueError('Стороны должны быть положительными')
 
-            if len(args) == 3:
+            if len(args) != 3:
                 raise IndexError(f'Передано {len(args)} аргументов, а ожидается 3')
             if args1 + args2 <= args3 or args2 + args3 <= args1 or args3 + args1 <= args2:
                 raise Exception('Не треугольник')
