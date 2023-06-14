@@ -6,7 +6,7 @@ import time
 import pytest
 import datetime
 
-@pytest.fixture()
+@pytest.fixture(autouse=True)
 def test_time1():
     start = datetime.datetime.now()
     print(f'Начало выполнения {start}')
